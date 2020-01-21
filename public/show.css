@@ -1,0 +1,20 @@
+.deleteform{
+	display:inline;
+}
+
+.mine{
+	display:inline-block;
+	
+}
+.text{
+	color:#27044a;
+	font-family: 'Merriweather', serif;
+}
+
+.my{
+	display:inline-block; float:right;
+}
+
+.des{
+	font-family: 'Noto Sans', sans-serif;
+}

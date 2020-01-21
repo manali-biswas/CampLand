@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+	<title>CampLand | All About Camps</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather|Noto+Sans|Pacifico&display=swap" rel="stylesheet">
+</head>
+<body class="bg-light">
+		<nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				CampLand
+			</a>
+		</div>
+			
+		
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="/">Home</a>
+				<a class="nav-item nav-link" href="/campgrounds">Camps</a>
+				<a class="nav-item nav-link" href="/campgrounds/new">New Camp</a>
+			</div>
+			<ul class="navbar-nav navbar-right ml-auto">
+				<%if(currentUser==undefined){%>
+		  <li class="nav-item"><a class="nav-item nav-link" href="/register" style="float:right;">Sign Up <i class="fa fa-user-plus"></i></a></li>
+       	  <li class="nav-item"><a class="nav-item nav-link"  href="/login" style="float:right;">Login <i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+				<%}else{%>
+		  <li class="nav-item"><a class="nav-item nav-link" href="#" style="float:right;"><%=currentUser.username%> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+		  <li class="nav-item"><a class="nav-item nav-link"  href="/logout" style="float:right;">Logout <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+				<%}%>
+      </ul>
+		</div>
+	</div>
+</nav>
+
+	
+<div class="container" style="padding-top:10px;">
+	<% if(danger && danger.length>0){%>
+	<div class="alert alert-danger" role="alert">
+  		<%=danger%>
+	</div>
+		<%}%>
+		<%if(success && success.length > 0){%>
+	<div class="alert alert-success" role="alert">
+  		<%=success%>
+		<%}%>
+	</div>
+	</div>
+
+

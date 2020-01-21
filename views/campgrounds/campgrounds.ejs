@@ -1,0 +1,36 @@
+<%- include("../partials/header.ejs") %>
+<link rel="stylesheet" href="campgrounds.css">
+
+
+<div class="container text-center">
+	<header class="jumbotron text-white">
+		<h1 class="me">
+			Welcome to the campgrounds page!
+		</h1>
+		<p>
+			Displaying the best camping grounds in India.
+		</p>
+		<a class="btn btn-danger btn-large" href="/campgrounds/new" role="button">Add A New Campground!</a>
+	</header>
+
+	<div class="row text-center justify-content-around" >
+	
+		<% campgrds.forEach(function(campground){%>			
+				<div class=" col-lg-3 col-sm-6" style="margin:10px;">
+					
+						<div class="card" style="width: 18rem;">
+	  					<img src="<%=campground.image%>"  class="card-img-top" >
+	  					<div class="card-body">
+						<p class="card-title"><%=campground.name%></p>
+						<a class="btn btn-outline-primary" href="/campgrounds/<%=campground._id%>" role="button">More Info</a>
+	  					</div>
+					
+					</div>
+										
+				</div>		
+		<%})%>
+		
+	</div>
+</div>
+
+	<%- include("../partials/footer.ejs") %>
