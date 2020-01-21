@@ -2,7 +2,7 @@
   "name": "yelpcamp",
   "version": "1.0.0",
   "main": "app.js",
-	"description":"A camps info website"
+	"description":"A camps info website",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 	  "start":"nodemon app.js"
