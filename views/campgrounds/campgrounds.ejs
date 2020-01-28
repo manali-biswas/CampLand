@@ -22,7 +22,10 @@
 	  					<img src="<%=campground.image%>"  class="card-img-top" >
 	  					<div class="card-body">
 						<p class="card-title"><%=campground.name%></p>
-						<a class="btn btn-outline-primary" href="/campgrounds/<%=campground._id%>" role="button">More Info</a>
+							<p class="card-text text-center">
+								&#x20B9; <%=campground.price%>/night
+							</p>
+						<a class="btn btn-outline-primary" href="/campgrounds/<%=campground._id%>" role="button">Know More</a>
 	  					</div>
 					
 					</div>
