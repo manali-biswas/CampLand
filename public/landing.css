@@ -6,8 +6,12 @@
 	height:100%!important;
 }
 .my{
-	width:38%;	
-	margin:13% 32%;
+	width:100%!important;
+	height:100%!important;
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+	min-width:100%;
+	
 	text-align:center;	
 	position:fixed;	
 	
