@@ -80,7 +80,17 @@ router.delete("/:id",middleware.checkOwner,function(req,res){
 	})
 })
 
-
+router.get("/:id/map",function(req,res){
+	Campground.findById(req.params.id,function(err,foundcampground){
+		if(err){
+			console.log(err);
+		}
+		else{
+			
+			res.render("campgrounds/show2",{campground:foundcampground});
+		}
+	});	
+});
 
 
 

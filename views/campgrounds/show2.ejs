@@ -1,0 +1,31 @@
+<%-include("../partials/header.ejs")%>
+<link rel="stylesheet" href="/show.css">
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<p class="lead">
+				<strong>YelpCamp</strong>
+			</p>
+			<ul class="list-group">
+				<a href="/campgrounds/<%=campground._id%>" class="list-group-item list-group-item-action">Info</a>
+				<a href="/campgrounds/<%=campground._id%>/map" class="list-group-item list-group-item-action active">Map</a>
+				<a href="#" class="list-group-item list-group-item-action">Info 3</a>
+			</ul>
+		</div>
+		<div class="col-md-9 container">
+			
+            <iframe width="600"
+                height="450"
+                style="border:0" loading="lazy"
+                src="https://www.google.com/maps/embed/v1/view?key=AIzaSyDQjiFfyW7pX6hfMbWqCp0fCxNIvWTHUTw&zoom=<%=campground.zoom%>>&center=<%=campground.map%>" allowfullscreen>
+            </iframe>
+			<div class="container"><h4 class="text"><%=campground.name%></h4>	</div>
+			
+		</div>
+	</div>
+		
+
+</div>
+
+
+<%-include("../partials/footer.ejs")%>
